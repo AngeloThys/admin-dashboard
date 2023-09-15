@@ -52,7 +52,7 @@ aside div > .material-symbols-outlined {
   font-size: 28px;
 }
 
-aside div > p {
+aside div > a {
   grid-column: 2;
   place-self: start;
 }
@@ -62,19 +62,42 @@ aside div > p {
   place-self: center;
 }
 
-.dashboard > p {
+.dashboard > a {
   font-size: 28px;
-  place-self: center;
+  place-self: center start;
 }
 
-aside p {
+a {
+    text-decoration: none;
+    color: white;
+}
+
+aside div {
+    transition: all 100ms ease-in-out;
+}
+
+aside div:hover {
+    cursor: pointer;
+    text-shadow: var(--tertiary-green) 0px 0px 2px;
+}
+
+aside div:active {
+    cursor: pointer;
+    text-shadow: none;
+}
+
+aside a {
   margin: 0;
 }
 
-.communities .material-symbols-outlined,
-.communities p {
+.communities .material-symbols-outlined {
+    grid-row: span 2;
+    place-self: start center;
+}
+
+.communities a {
   grid-row: span 2;
-  place-self: start center;
+  place-self: start;
 }
 
 header {
