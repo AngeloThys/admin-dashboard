@@ -8,6 +8,7 @@
 
 * {
   font-family: "Raleway", sans-serif;
+  color: var(--primary-brown);
 }
 
 .material-symbols-outlined {
@@ -31,7 +32,6 @@ body {
 
 aside {
   background-color: var(--secondary-green);
-  color: white;
   font-size: 1.5rem;
   grid-area: sidebar;
   padding: 1rem;
@@ -67,7 +67,11 @@ aside div > a {
   place-self: center start;
 }
 
-a {
+aside .material-symbols-outlined {
+  color: white;
+}
+
+aside a {
   text-decoration: none;
   color: white;
 }
@@ -101,7 +105,7 @@ aside a {
 }
 
 header {
-  padding: 0px 2rem;
+  padding: 0.75rem 2rem;
   grid-area: header;
   display: grid;
   grid-template:
@@ -112,9 +116,28 @@ header {
 
 .search {
   grid-area: search;
+  width: 100%;
   place-self: center start;
   display: flex;
   gap: 8px;
+}
+
+.search span {
+  font-size: 2rem;
+}
+
+.search input {
+  border: 0;
+  background-color: var(--tertiary-green);
+  border-radius: 4px;
+  width: 75%;
+  height: 2rem;
+  font-size: 1.5rem;
+  box-shadow: 0px 2px 0px var(--secondary-green);
+}
+
+.search input:focus {
+  outline: 2px solid var(--secondary-green);
 }
 
 .user-profile {
@@ -123,6 +146,16 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.user-profile img {
+  height: 32px;
+  width: 32px;
+}
+
+.user-profile .material-symbols-outlined {
+  font-size: 2rem;
 }
 
 .user-welcome {
@@ -133,6 +166,15 @@ header {
   gap: 1rem;
 }
 
+.user-welcome img {
+  height: 48px;
+  width: 48px;
+}
+
+.username {
+  font-size: 1.5rem;
+}
+
 .user-controls {
   grid-area: controls;
   place-self: center end;
@@ -140,21 +182,28 @@ header {
   gap: 1rem;
 }
 
-.user-profile img {
-  height: 32px;
-  width: 32px;
+.user-controls > button {
+  border: 0;
+  border-radius: 4px;
+  background-color: var(--tertiary-green);
+  padding: 1rem;
+  box-shadow: 0px 4px 0px var(--primary-brown);
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
 }
 
-.user-welcome img {
-  height: 48px;
-  width: 48px;
+.user-controls > button:hover {
+  transform: translateY(1px);
+  box-shadow: 0px 3px 0px var(--primary-brown);
 }
 
-.username {
-  font-size: 24px;
+.user-controls > button:active {
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
 main {
+  box-shadow: inset 2px 2px 4px var(--tertiary-green);
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='69.283' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M46.189-20L57.736 0M46.189 20l11.547 20m-46.189 0l11.547 20M11.547 0l11.547 20m40.415 30H40.415M28.868 30H5.774m23.094-40H5.774m57.735 20H40.415m0 20L28.868 50m11.547-60L28.868 10m46.188 0L63.509 30M5.774 10L-5.773 30m75.056 10H46.189L34.64 20 46.19 0h23.094C73.13 6.667 76.98 13.333 80.83 20zM57.736 60H34.64L23.094 40l11.547-20h23.095c3.848 6.667 7.698 13.333 11.547 20L57.736 60zm0-40H34.64L23.094 0l11.547-20h23.095L69.283 0c-3.87 6.7-8.118 14.06-11.547 20zM34.64 60H11.547L0 40l11.547-20h23.094L46.19 40 34.64 60zm0-40H11.547L0 0l11.547-20h23.094L46.19 0 34.64 20zM23.094 40H0l-5.773-10-5.774-10L0 0h23.094l11.547 20-11.547 20z'  stroke-width='0.5' stroke='hsla(168, 37%, 33%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   grid-area: main;
 }
