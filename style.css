@@ -301,6 +301,7 @@ main {
 }
 
 .announcements > div > h1 {
+  cursor: pointer;
   font-size: 1.25rem;
   margin: 0;
 }
@@ -353,4 +354,9 @@ main {
 
 .at {
   font-weight: 700;
+  cursor: pointer;
+}
+
+.at:hover {
+  text-shadow: 0px 0px 1px var(--secondary-brown);
 }
