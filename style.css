@@ -53,13 +53,13 @@ aside div {
 
 aside div > .material-symbols-outlined {
   grid-column: 1;
-  place-self: start center;
+  place-self: center;
   font-size: 28px;
 }
 
 aside div > a {
   grid-column: 2;
-  place-self: start;
+  place-self: center start;
 }
 
 .dashboard > .material-symbols-outlined {
